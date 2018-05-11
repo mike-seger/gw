@@ -1,0 +1,14 @@
+server:
+    port: 18070
+spring:
+    cloud:
+        gateway:
+            routes:
+            - id: route1
+              uri: "http://localhost:18092"
+              predicates:
+              - Path=/api1/**
+              filters:
+              - StripPrefix=1
+              - AddRequestParameter=foo, bar
+              - AddResponseHeader=X-SomeHeader, Bar
