@@ -30,7 +30,7 @@ nbdist/
 *~
 
 ### Ignored local configs (all profiled) 
-/config/*
-!/config/application.yaml
-!/config/application.properties
+/config/
+#!/config/application.yaml
+#!/config/application.properties
 
