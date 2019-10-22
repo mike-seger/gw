@@ -5,7 +5,7 @@ To tart the gateway, simply run in the repository root (location of pom.xml):
 mvn spring-boot:run
 ```
 
-The example below makes the uri: http://localhost:18070/api1/ 
+Simply create config/application.yaml with the following content:
 ```
 server:
     port: 18070
@@ -22,8 +22,8 @@ spring:
               - AddRequestParameter=foo, bar
               - AddResponseHeader=X-SomeHeader, Bar      
 ``` 
-
-Then test retrieving the google home page:
+The example above makes the uri: http://localhost:18070/api1/ a gateway to google.
+You can test retrieving the google home page as follows:
 ```
 curl http://localhost:18070/api1/
 ```
